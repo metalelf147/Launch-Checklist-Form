@@ -30,22 +30,22 @@ window.addEventListener("load", function() {
       
 
 
-      if(pilotNameInput.value === "") {
+      if(pilotNameInput.value === "" || !isNaN(pilotNameInput.value)) {
          alert("All fields are required. What is the pilot's name?"); 
          event.preventDefault();
       }
 
-      if(copilotNameInput.value === "") {
+      if(copilotNameInput.value === "" || !isNaN(copilotNameInput.value)) {
          alert("All fields are required. What is the copilot's name?"); 
          event.preventDefault();
       }
 
-      if(isNaN(Number(fuelLevelInput.value))) {
+      if(isNaN(Number(fuelLevelInput.value)) || fuelLevelInput.value === "") {
          alert("Fuel level must be a number."); 
          event.preventDefault();
       }
 
-      if(isNaN(cargoMassInput.value)) {
+      if(isNaN(cargoMassInput.value) || cargoMassInput.value === "") {
          alert("Cargo mass must be a number."); 
          event.preventDefault();
       }
